@@ -5,7 +5,7 @@ import pandas as pd
 def make_bubble_chart_blueprint(repository):
     blueprint = Blueprint("bubble_chart", __name__, template_folder="templates")
 
-    @blueprint.route("/")
+    @blueprint.route("/", endpoint="index")
     def bubble_chart():
         activities = repository.meta
 
